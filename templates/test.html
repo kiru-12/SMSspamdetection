@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Processing</title>
+  <script>
+    function submitForm(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Retrieve the input textarea and result textarea
+      var inputTextarea = document.getElementById("input-textarea");
+      var resultTextarea = document.getElementById("result-textarea");
+
+      // Get the input text
+      var inputText = inputTextarea.value;
+
+      // Perform AJAX request to send the input text to the Python code
+      // You can use XMLHttpRequest or fetch API to make the request
+
+      // Simulating the AJAX request
+      // Replace this with your actual AJAX code
+      setTimeout(function() {
+        var result = "Processed: " + inputText; // Replace with your actual result
+
+        // Update the result textarea
+        resultTextarea.value = result;
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <textarea id="input-textarea" rows="4" cols="50"></textarea><br>
+    <button type="submit" onclick="submitForm(event)">Process</button>
+    <textarea id="result-textarea" rows="4" cols="50" readonly></textarea>
+  </form>
+</body>
+</html>
